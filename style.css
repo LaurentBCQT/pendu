@@ -1,0 +1,97 @@
+*, ::before, ::after
+{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+
+header{
+    height: 15vh;
+    background-color: red;
+    animation: changeColor 0.1s infinite alternate linear;
+    text-align: center;
+}
+
+.life{
+    text-align: center;
+    height: 15vh;
+    padding-top: 50px;
+}
+
+.heart {
+    background-color: red;
+    display: inline-block;
+    height: 30px;
+    margin: 0 10px;
+    position: relative;
+    top: 0;
+    transform: rotate(-45deg);
+    width: 30px;
+  }
+  
+  .heart:before,
+  .heart:after {
+    content: "";
+    background-color: red;
+    border-radius: 50%;
+    height: 30px;
+    position: absolute;
+    width: 30px;
+  }
+  
+  .heart:before {
+    top: -15px;
+    left: 0;
+  }
+  
+  .heart:after {
+    left: 15px;
+    top: 0;
+  }
+
+
+
+.word{
+    background-color: antiquewhite;
+    font-size: 80px;
+    text-align: center;
+}
+
+
+button{
+    width: 2em;
+    height: 2em;
+    border-radius: 25%;
+    font-size: 25px;
+    
+}
+
+.letters{
+    display: flex;
+    flex-wrap: wrap;
+    gap: 32px;
+    background-color: gray;
+}
+
+
+@keyframes changeColor {
+    0%{
+        background-color: red;
+    }
+    20%{
+        background-color: yellow;
+    }
+    40%{
+        background-color: green;
+    }
+    60%{
+        background-color: cyan;
+    }
+    80%{
+        background-color: blue;
+    }
+    100%{
+        background-color: magenta;
+    }
+}
